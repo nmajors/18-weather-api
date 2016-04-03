@@ -1,6 +1,7 @@
 body {
   color: white;
-  font-family: Helvetica; }
+  font-family: Helvetica;
+  padding: 10px; }
 
 .appContainer {
   width: 320px;
@@ -10,7 +11,7 @@ body {
 
 header {
   text-align: center;
-  padding-top: 30px; }
+  padding-top: 10px; }
 
 section {
   display: table;
