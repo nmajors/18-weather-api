@@ -1,0 +1,35 @@
+section{
+  display: table;
+  width: 100%;
+}
+.row{
+  display: table-row;
+  width: 100%;
+}
+.dayOfWeek {
+  display: table-cell;
+  width: 28%;
+  padding-left: 15px;
+  vertical-align: middle;
+}
+.weatherIcon{
+  display: table-cell;
+  width: 40%;
+  text-align: center;
+  vertical-align: middle;
+}
+.highTemp{
+  display: table-cell;
+  width: 16%;
+  text-align: right;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+.lowTemp{
+  display: table-cell;
+  width: 2%;
+  text-align: right;
+  padding-right: 15px;
+  color: #85C1E9;
+  vertical-align: middle;
+}
