@@ -2,7 +2,7 @@ import 'es6-promise';
 import 'whatwg-fetch';
 
 let baseUrl = "https://whispering-everglades-16419.herokuapp.com/data/2.5/";
-// let apiKey = "97e2a65458fa6ffa369e9f2c945bd316";
+
 
 navigator.geolocation.getCurrentPosition(function(position) {
   let latitude = position.coords.latitude;
@@ -36,7 +36,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
         let highTempValue = Math.round(Number(day.temp.max));
         let lowTempValue = Math.round(Number(day.temp.min));
         let iconCode = day.weather[0].icon;
-        let iconCodeUrl = `http://openweathermap.org/img/w/${iconCode}.png`
+        let iconCodeUrl = `https://openweathermap.org/img/w/${iconCode}.png`
 
         var dayOfWeekName
         switch (dayOfWeekValue) {
