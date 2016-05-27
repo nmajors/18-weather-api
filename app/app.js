@@ -1,14 +1,14 @@
 import 'es6-promise';
 import 'whatwg-fetch';
 
-let baseUrl = "http://api.openweathermap.org/data/2.5/";
-let apiKey = "97e2a65458fa6ffa369e9f2c945bd316";
+let baseUrl = "https://whispering-everglades-16419.herokuapp.com/data/2.5/";
+// let apiKey = "97e2a65458fa6ffa369e9f2c945bd316";
 
 navigator.geolocation.getCurrentPosition(function(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
 
-  fetch(`${baseUrl}weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`)
+  fetch(`${baseUrl}weather?lat=${latitude}&lon=${longitude}&units=imperial`)
     .then((response) => {
       return response.json();
     })
@@ -19,7 +19,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
       document.querySelector("#currentTemp").textContent = `${currentTemp}°`;
     });
 
-  fetch(`${baseUrl}forecast/daily?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=imperial`)
+  fetch(`${baseUrl}forecast/daily?lat=${latitude}&lon=${longitude}&units=imperial`)
     .then((response) => {
       return response.json();
     })
